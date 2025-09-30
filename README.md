@@ -1,3 +1,38 @@
+# Tic Tac Toe AI (Vanilla Web)
+
+A small, responsive, accessible Tic Tac Toe game with an AI opponent. Built with vanilla HTML/CSS/JS.
+
+## Features
+
+- Adjustable difficulty: Easy, Medium, Hard
+- Choose your symbol (X/O) and who starts (You/AI)
+- Smart AI using minimax (alpha-beta) + heuristics
+- Scoreboard with persistent storage (localStorage)
+- Keyboard and screen-reader friendly
+- Mobile responsive UI
+
+## Run
+
+This is a static site. You can open `index.html` directly in a modern browser, or serve it locally:
+
+```bash
+# Python 3
+python3 -m http.server 8000
+# then open http://localhost:8000
+```
+
+## Play
+
+1. Pick your symbol and starter
+2. Choose difficulty
+3. Click or press Enter/Space on a cell to play
+4. Restart anytime; reset scores from the scoreboard
+
+## Notes
+
+- Scores persist in `localStorage` under the key `ttt_scoreboard_v1`.
+- The AI uses a mix of random moves and shallow search on Easy, deeper limited search on Medium, and full minimax with alpha-beta on Hard.
+
 # Tic-Tac-Toe Game Using Mini-Max Algorithm
 
 **Downloaded from my old GitHub Account(https://github.com/VageeshaDatta)**

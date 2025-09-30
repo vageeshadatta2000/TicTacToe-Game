@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tic Tac Toe AI</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="app__header">
+        <h1 class="app__title">Tic Tac Toe AI</h1>
+        <p class="app__subtitle">Play against a smart AI with adjustable difficulty</p>
+      </header>
+
+      <section class="controls" aria-label="Game controls">
+        <div class="controls__group">
+          <label for="symbolSelect">Your symbol</label>
+          <select id="symbolSelect" aria-label="Select your symbol">
+            <option value="X">X</option>
+            <option value="O">O</option>
+          </select>
+        </div>
+        <div class="controls__group">
+          <label for="starterSelect">First move</label>
+          <select id="starterSelect" aria-label="Select who starts">
+            <option value="human">You</option>
+            <option value="ai">AI</option>
+          </select>
+        </div>
+        <div class="controls__group">
+          <label for="difficultySelect">Difficulty</label>
+          <select id="difficultySelect" aria-label="Select difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium" selected>Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+        </div>
+        <div class="controls__buttons">
+          <button id="restartBtn" class="btn" type="button">Restart</button>
+        </div>
+      </section>
+
+      <section class="statusbar" aria-live="polite" aria-atomic="true">
+        <div id="statusText" class="statusbar__text">Welcome! Configure options and start playing.</div>
+      </section>
+
+      <section class="board" role="grid" aria-label="Tic Tac Toe board">
+        <div class="board__row" role="row">
+          <button class="cell" role="gridcell" data-index="0" aria-label="Cell 1" aria-live="off"></button>
+          <button class="cell" role="gridcell" data-index="1" aria-label="Cell 2" aria-live="off"></button>
+          <button class="cell" role="gridcell" data-index="2" aria-label="Cell 3" aria-live="off"></button>
+        </div>
+        <div class="board__row" role="row">
+          <button class="cell" role="gridcell" data-index="3" aria-label="Cell 4" aria-live="off"></button>
+          <button class="cell" role="gridcell" data-index="4" aria-label="Cell 5" aria-live="off"></button>
+          <button class="cell" role="gridcell" data-index="5" aria-label="Cell 6" aria-live="off"></button>
+        </div>
+        <div class="board__row" role="row">
+          <button class="cell" role="gridcell" data-index="6" aria-label="Cell 7" aria-live="off"></button>
+          <button class="cell" role="gridcell" data-index="7" aria-label="Cell 8" aria-live="off"></button>
+          <button class="cell" role="gridcell" data-index="8" aria-label="Cell 9" aria-live="off"></button>
+        </div>
+      </section>
+
+      <section class="scoreboard" aria-label="Scoreboard">
+        <div class="scoreboard__item"><span class="scoreboard__label">X wins</span><span id="scoreX" class="scoreboard__value">0</span></div>
+        <div class="scoreboard__item"><span class="scoreboard__label">O wins</span><span id="scoreO" class="scoreboard__value">0</span></div>
+        <div class="scoreboard__item"><span class="scoreboard__label">Draws</span><span id="scoreDraw" class="scoreboard__value">0</span></div>
+        <button id="resetScoreBtn" class="btn btn--subtle" type="button">Reset scores</button>
+      </section>
+
+      <footer class="app__footer">
+        <small>Built with vanilla HTML/CSS/JS. Keyboard and screen reader friendly.</small>
+      </footer>
+    </main>
+
+    <script src="./script.js" defer></script>
+  </body>
+  </html>
+

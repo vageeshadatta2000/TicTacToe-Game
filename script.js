@@ -163,6 +163,7 @@ function aiMove() {
   }
 
   appState.currentPlayer = "human";
+  renderBoard();
   updateStatusText();
 }
 
